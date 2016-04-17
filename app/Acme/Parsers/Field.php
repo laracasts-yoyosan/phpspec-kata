@@ -29,7 +29,7 @@ class Field
      */
     protected function splitFieldsIntoChunks($fields)
     {
-        return explode(', ', $fields);
+        return preg_split('/, ?/', $fields);
     }
 
     protected function parseChunk($declaration, $parsed)

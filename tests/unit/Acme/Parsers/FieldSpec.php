@@ -23,6 +23,12 @@ class FieldSpec extends ObjectBehavior
                 'title' => 'string',
                 'body' => 'text',
             ]);
+
+        $this->parse('title:string,body:text')
+            ->shouldReturn([
+                'title' => 'string',
+                'body' => 'text',
+            ]);
     }
 
     public function it_squawks_if_the_provided_field_type_is_not_recognized()
